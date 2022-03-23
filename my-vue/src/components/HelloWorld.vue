@@ -1,24 +1,43 @@
 <template>
+<div>
+    <prog :mm="mm" :message="message" :name="name" ref="prog" :number="number"></prog> 
+       
+       
 
-  <div class="hello">
-   <whoprog></whoprog>
-   <hi></hi>
+<button @click="buttonClick">Primary</button>
   </div>
 </template>
 
 <script> 
-import whoprog from "./first.vue"
-import hi from "../second.vue"
+
+import prog from "../prog1.vue"
+
 export default {
   name: 'HelloWorld',
   
   components: {
-   whoprog,hi
-  },
+    prog,
+   
+},
 
-  props: {
-    msg: String
+data(){
+  return {
+    message:"hello props" ,
+    name:"prop1",
+     number:"123",
+     mm:'dfsdf'
   }
+},mounted(){
+  console.log('heyyy')
+},
+methods:{
+  buttonClick(){
+    this.$refs.prog.f1();
+    this.$refs.progw.f1()
+   
+}
+  
+}
 }
 </script>
 
