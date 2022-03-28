@@ -1,8 +1,8 @@
 <template>
 <div>
-    <prog :mm="mm" :message="message" :name="name" ref="prog" :number="number"></prog> 
+    <prog  :message="message" :name="name" ref="prog" :number="number" :njh="njh"></prog> 
        
-       
+
 
 <button @click="buttonClick">Primary</button>
   </div>
@@ -25,17 +25,16 @@ data(){
     message:"hello props" ,
     name:"prop1",
      number:"123",
-     mm:'dfsdf'
+     njh:"chaitrika"
   }
 },mounted(){
   console.log('heyyy')
 },
 methods:{
   buttonClick(){
-    this.$refs.prog.f1();
-    this.$refs.progw.f1()
-   
-}
+    var a= this.$refs.prog.njh;
+   console.log(a);
+   }
   
 }
 }
