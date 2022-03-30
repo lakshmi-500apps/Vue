@@ -23,9 +23,7 @@ items: [
 {name:"500apps Python",id:3, description:"Backend built using python"},
 { name:"500apps infinity",id:4, description:"Built using vue JS"}],
 fields: [
-'id','name'
-]
-}
+'id','name']}
 }
 }
 </script>

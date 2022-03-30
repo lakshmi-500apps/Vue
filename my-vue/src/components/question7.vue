@@ -10,7 +10,6 @@
              { id: 88, name: 'Commander Jerjerrod' } ];
 export default{
     name:"QuestioN7",
-    
     methods: {
        
         f7(){

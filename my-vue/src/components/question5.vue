@@ -10,9 +10,11 @@ import helloworld from "./HelloWorld.vue"
 
 export default{
     name:"QuestioN5",
+
  components:{
      helloworld,
   } ,
+  
       methods: {
      f2(){
             alert("Question 5");

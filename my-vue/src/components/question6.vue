@@ -7,6 +7,7 @@
       name:"500apps Python", description:"Backend built using python" ,<br>
       name:"500apps infinity", description:"Built using vue JS" 
     </b-card-text>
+    
 </b-card>
 </div>
 </template>

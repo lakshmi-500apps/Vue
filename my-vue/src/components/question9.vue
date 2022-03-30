@@ -5,15 +5,22 @@
 </div>
 </template>
 <script>
- var a=['a',2,3];
-        var b =[4,'b',6];
-      a=[...a ,...b];
+
 export default{
     name:"QuestioN",
+    data() {
+        return {
+             a:['a',2,3],
+        b :[4,'b',6],
+    
+        }
+    },
+    mounted(){
+        this.a=[...this.a,...this.b]
+        },
 methods: {
-
-fun(){
-       alert(a);
+    fun(){
+       alert(this.a);
     }
 },
 }

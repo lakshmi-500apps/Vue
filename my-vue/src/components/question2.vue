@@ -7,9 +7,7 @@
    <h2>Location:{{Location}}</h2>
 </div>
 </template>
-
 <script>
-
 export default{
     name:"QuestioN2",
 

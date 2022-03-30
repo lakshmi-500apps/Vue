@@ -7,10 +7,8 @@
    <h2> number:{{number}}</h2>
    
 </div>
-
 </template>
 <script>
-
 export default{
     name:"QuestioN3",
     props :{

@@ -3,6 +3,7 @@
     <h2>Question 8</h2>
      <button @click="f2()">Submit</button>
 </div>
+
 </template>
 <script>
 var officers = [ { id: 20, name: 'Captain Piett' }, 

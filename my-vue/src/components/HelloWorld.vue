@@ -12,9 +12,7 @@
   <button @click="display3()">Question 7</button>
   </div>
 </template>
-
 <script> 
-
 import ques2 from "./question2.vue"
 import ques3 from "@/components/question3.vue"
 import ques4 from "./question4.vue"
