@@ -8,6 +8,8 @@ import ap2 from '../components/api-2.vue'
 import ques9 from '../components/question9.vue'
 import ques8 from '../components/question8.vue'
 import es6 from "../components/es6.vue"
+import npmt from "../components/npmtable.vue"
+import vfor from "../components/v-for.vue"
 Vue.use(Router)
 
 const routes = [
@@ -18,7 +20,9 @@ const routes = [
     { path: '/home', component: home },
     { path: '/a', component: api },
     { path: '/API', component: ap2 },
-    { path: '/es6', component: es6 }
+    { path: '/es6', component: es6 },
+    { path: '/npmt', component: npmt },
+    { path: '/vfor', component: vfor }
 ]
 
 let router = new Router({ routes })
