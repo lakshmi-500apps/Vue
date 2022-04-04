@@ -1,6 +1,6 @@
 <template>
 <div>
-     <ques2 name=" Agile CRM" description="A company of excellence" Yearsofexperience="12" Location="Hyderabad"></ques2> 
+     <!-- <ques2 name=" Agile CRM" description="A company of excellence" Yearsofexperience="12" Location="Hyderabad"></ques2> 
      <ques3  message="hi" name1="name1" number="1234"></ques3>
      <ques4 ref="ref"></ques4>
     
@@ -9,27 +9,30 @@
   <button @click="display2()">Question 5</button>
   <ques6></ques6>
  <ques7 ref="ref2"></ques7>
-  <button @click="display3()">Question 7</button>
+  <button @click="display3()">Question 7</button> -->
+  <q6 ref="parent"></q6>
+  <button @click="display4()">Ques 6</button>
   </div>
 </template>
 <script> 
-import ques2 from "./question2.vue"
-import ques3 from "@/components/question3.vue"
-import ques4 from "./question4.vue"
-import ques5 from "./question5.vue"
-import ques6 from "./question6.vue"
-import ques7 from "./question7.vue"
+// import ques2 from "./question2.vue"
+// import ques3 from "@/components/question3.vue"
+// import ques4 from "./question4.vue"
+// import ques5 from "./question5.vue"
+// import ques6 from "./question6.vue"
+// import ques7 from "./question7.vue"
+import q6 from "./Ques6.vue"
 export default {
   name: 'HelloWorld',
   
   components: {
-    ques2,
-    ques3,
-    ques4,
-    ques5,
-    ques6,
-    ques7
-  
+    // ques2,
+    // ques3,
+    // ques4,
+    // ques5,
+    // ques6,
+    // ques7
+     q6
    },
 
 data(){
@@ -55,8 +58,10 @@ methods:{
 
   display3(){
     this.$refs.ref2.f7();
-  }
-  
+  },
+   display4(){
+    this.$refs.parent.fun();
+   }
 }
 }
 
