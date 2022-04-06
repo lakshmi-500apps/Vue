@@ -22,6 +22,17 @@ import q7 from "../components/Ques7.vue"
 import q8 from "../components/Ques8.vue"
 import q9 from "../components/Ques9.vue"
 import q10 from "../components/Ques10.vue"
+import ex from "../components/example.vue"
+import ex2 from "../components/example2.vue"
+import vif from "../components/v-if.vue"
+import que1 from "../components/q1.vue"
+import que3 from "../components/q3.vue"
+import que4 from "../components/q4.vue"
+import que5 from "../components/q5.vue"
+import que7 from "../components/q7.vue"
+import que8 from "../components/q8.vue"
+import que9 from "../components/q9.vue"
+import que10 from "../components/q10.vue"
 Vue.use(Router)
 
 const routes = [
@@ -46,6 +57,18 @@ const routes = [
     { path: '/q8', component: q8 },
     { path: '/q9', component: q9 },
     { path: '/q10', component: q10 },
+    { path: '/ex', component: ex },
+    { path: '/ex2', component: ex2 },
+    { path: '/vif', component: vif },
+    { path: '/que1', component: que1 },
+    { path: '/que3', component: que3 },
+    { path: '/que4', component: que4 },
+    { path: '/que5', component: que5 },
+    { path: '/que7', component: que7 },
+    { path: '/que7', component: que7 },
+    { path: '/que8', component: que8 },
+    { path: '/que9', component: que9 },
+    { path: '/que10', component: que10 },
     //{ path: '/q5', component: q5 }
 ]
 

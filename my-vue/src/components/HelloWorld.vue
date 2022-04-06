@@ -10,8 +10,10 @@
   <ques6></ques6>
  <ques7 ref="ref2"></ques7>
   <button @click="display3()">Question 7</button> -->
-  <q6 ref="parent"></q6>
-  <button @click="display4()">Ques 6</button>
+  <!-- <q6 ref="parent"></q6> -->
+  <!-- <button @click="display4()">Ques 6</button> -->
+  <que6 ref="q6"></que6>
+  <button @click="display4()">Question 6</button>
   </div>
 </template>
 <script> 
@@ -21,7 +23,8 @@
 // import ques5 from "./question5.vue"
 // import ques6 from "./question6.vue"
 // import ques7 from "./question7.vue"
-import q6 from "./Ques6.vue"
+// import q6 from "./Ques6.vue"
+import que6 from "./q6.vue"
 export default {
   name: 'HelloWorld',
   
@@ -32,7 +35,8 @@ export default {
     // ques5,
     // ques6,
     // ques7
-     q6
+     //q6
+     que6
    },
 
 data(){
@@ -60,7 +64,7 @@ methods:{
     this.$refs.ref2.f7();
   },
    display4(){
-    this.$refs.parent.fun();
+  this.$refs.q6.f1()
    }
 }
 }
