@@ -1,26 +1,37 @@
 <template>
-<div>
+  <div>
     <h1>Question 5</h1>
-   <b-card v-for="hi in items" :key="hi.message">{{hi.university_name}}<br>{{hi. domains}}<br>{{hi.website_url}}<br>{{hi.state_province}}</b-card><br>
-    <input placeholder="enter a country name"><br><br>
-    <button @click="getData()">Submit</button>
-</div>
+    <b-form-input v-model="value" placeholder="Enter your country"></b-form-input>
+    <b-button  @click="getData">Get Data</b-button>
+    <b-card v-for="value in items" :key="value.domains" class="mb-2">
+      <b-card-text>university_name:-- {{ value.university_name }} </b-card-text>
+      <p>domains:--{{ value.domains }}</p>
+      <p>website_url:--{{ value.website_url }}</p>
+      <p>state_province:--{{ value.state_province }}</p>
+    </b-card>
+  </div>
 </template>
 <script>
-export default {
-name: 'App',
-data(){
-  return{
-    items:[{university_name:"Awadhesh Pratap Singh University", domains:"apsurewa.nic.in", website_url:"http://www.apsurewa.nic.in/", state_province:"Madhya Pradesh"},
-    {university_name:"Marywood University", domains:"marywood.edu", website_url:"http://www.marywood.edu", state_province:"null"},
-    {university_name:"Lindenwood University", domains:"lindenwood.edu", website_url:"http://www.lindenwood.edu/", state_province:"null"},
-    {university_name:"University of Petroleum and Energy Studies", domains:"upes.ac.in", website_url:"https://www.upes.ac.in/", state_province:"Dehradun"}]
-  }
-},
-methods: {
-    getData(){
-          fetch("http://universities.hipolabs.com/search")                             
-}
-}
-}
+  export default {
+    name: "QueS5",
+    data() {
+      return {
+        value: "",
+        items: [],
+        res: [],
+      };
+    },
+
+    methods: {
+      async getData() {
+        const response = await fetch("http://universities.hipolabs.com/search?country=" + this.value, {
+        });
+        const responseText = await response.json();
+        this.items = responseText.map((row) => {
+          return { university_name: row.name, domains: row.domains, website_url: row.web_pages, state_province: row["state-province"] };
+        });
+      },
+    },
+  };
 </script>
+  

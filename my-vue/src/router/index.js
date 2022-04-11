@@ -37,6 +37,8 @@ import qu1 from "../components/qu1.vue"
 import qu3 from "../components/qu3.vue"
 import qu4 from "../components/qu4.vue"
 import qu5 from "../components/qu5.vue"
+import qu6 from "../components/qu6.vue"
+
 
 Vue.use(Router)
 
@@ -78,7 +80,7 @@ const routes = [
     { path: '/qu3', component: qu3 },
     { path: '/qu4', component: qu4 },
     { path: '/qu5', component: qu5 },
-
+    { path: '/qu6', component: qu6 },
     //{ path: '/q5', component: q5 }
 ]
 
