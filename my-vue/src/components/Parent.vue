@@ -1,6 +1,7 @@
 <template>
 <div>
     <b-table :items="a" :fields="b"></b-table>
+    <child @value="parf1()"></child>
 </div>
 </template>
 <script>
@@ -17,6 +18,11 @@ export default{
                {Sno:4,name:"aziya",branch:"ECE"},
                {Sno:5,name:"geeta",branch:"CSE"}],
             b:['Sno','name','branch']
+        }
+    },
+    methods:{
+        parf1(){
+          console.log("hi ")
         }
     }
 }

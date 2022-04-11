@@ -29,7 +29,7 @@ async function scrapeData() {
         const listItems = $(".plainlist ul li");
         const countries = [];
         listItems.each((idx, el) => {
-            const country = { name: "", iso3: "" };
+            const country = { url: "", name: "" };
             country.name = $(el).children("a").text();
             country.iso3 = $(el).children("span").text();
             countries.push(country);
