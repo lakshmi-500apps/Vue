@@ -34,7 +34,6 @@
         window.open(value, "_blank");
       },
       async getData() {
-        // Get the response
         const response = await fetch("http://universities.hipolabs.com/search?country=" + this.value, {
           method: "GET",
         });
@@ -46,6 +45,4 @@
     },
   };
 </script>
-
-
 <style scoped></style>

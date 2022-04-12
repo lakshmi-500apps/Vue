@@ -1,17 +1,18 @@
 const axios = require("axios");
 const cheerio = require("cheerio");
 const pretty = require("pretty");
-const markup = `<ul class="fruits">
+
+const markup = `
+<ul class="fruits">
   <li class="fruits__mango"> Mango </li>
   <li class="fruits__apple"> Apple </li>
-</ul>`;
+</ul>
+`;
 const $ = cheerio.load(markup);
 console.log(pretty($.html()));
 const mango = $(".fruits__mango");
 console.log(mango.html());
-const apple = $(".fruits__apple");
-console.log(apple.attr("class"));
-const listItems = $("li");
+const listItems = $("a");
 console.log(listItems.length);
 listItems.each(function(idx, el) {
     console.log($(el).text());
@@ -21,17 +22,16 @@ ul.append("<li>Banana</li>");
 ul.prepend("<li>Pineapple</li>");
 console.log(pretty($.html()));
 const fs = require("fs");
-const url = "https://agilecrm.com/";
+const url = "https://agilecrm.com";
 async function scrapeData() {
     try {
         const { data } = await axios.get(url);
         const $ = cheerio.load(data);
-        const listItems = $(".plainlist ul li");
+        const listItems = $("a");
         const countries = [];
         listItems.each((idx, el) => {
-            const country = { url: "", name: "" };
-            country.name = $(el).children("a").text();
-            country.iso3 = $(el).children("span").text();
+            const country = { url: '' };
+            country.url = $(el).attr('href');
             countries.push(country);
         });
         console.dir(countries);
