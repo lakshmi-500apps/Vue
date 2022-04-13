@@ -39,8 +39,8 @@ import qu4 from "../components/qu4.vue"
 import qu5 from "../components/qu5.vue"
 import qu6 from "../components/qu6.vue"
 import qu7 from "../components/qu7.vue"
-import ques1 from "../components/que1.vue"
-import ques2 from "../components/que2.vue"
+import ques1 from "../components/assignment 6/que1.vue"
+import ques2 from "../components/assignment 6/que2.vue"
 
 Vue.use(Router)
 
