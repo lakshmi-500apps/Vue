@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <h1>question 4</h1>
+    <input id="ip" placeholder="Enter data">
+    <button onclick="f1()">Submit</button>
+</head>
+
+<body>
+    <script>
+        function f1() {
+            var a = document.getElementById("ip").value;
+            if (Array.isArray(a) == true) {
+                alert("true");
+            } else {
+                alert("false");
+            }
+        }
+    </script>
+</body>
+
+</html>

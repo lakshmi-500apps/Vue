@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="reduce()">click</button>
+    <script>
+        function reduce() {
+            var array = [1, 2, 3, 4, 5];
+            var c = array.reduce((a, b) => {
+                a = b * 2;
+                console.log(a);
+                return a
+            }, []);
+        }
+    </script>
+</body>
+
+</html>
