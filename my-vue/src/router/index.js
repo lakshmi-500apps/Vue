@@ -41,7 +41,7 @@ import qu6 from "../components/qu6.vue"
 import qu7 from "../components/qu7.vue"
 import ques1 from "../components/assignment 6/que1.vue"
 import ques2 from "../components/assignment 6/que2.vue"
-
+import testq1 from "../components/assignment 10-05-2022/Question1.vue"
 Vue.use(Router)
 
 const routes = [
@@ -86,6 +86,7 @@ const routes = [
     { path: '/qu7', component: qu7 },
     { path: '/ques1', component: ques1 },
     { path: '/ques2', component: ques2 },
+    { path: '/testq1', component: testq1 },
     //{ path: '/q5', component: q5 }
 ]
 
